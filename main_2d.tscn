@@ -1,0 +1,159 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmkbmwskegcfm"]
+
+[ext_resource type="Texture2D" uid="uid://mbgfr7af161g" path="res://locations/scheme.jpg" id="1_q6avo"]
+[ext_resource type="Script" uid="uid://bqp8y2frl4thr" path="res://canvas_layer.gd" id="1_sxeyp"]
+[ext_resource type="Texture2D" uid="uid://beicgsfem63ec" path="res://locations/city1.jpg" id="1_yhyqj"]
+[ext_resource type="Texture2D" uid="uid://bllcm26dh1j7b" path="res://locations/city2.jpg" id="2_q6avo"]
+[ext_resource type="Texture2D" uid="uid://be7nkd3o4kn53" path="res://locations/city3.jpg" id="3_sxeyp"]
+[ext_resource type="Texture2D" uid="uid://cyfw0wju7ek7x" path="res://locations/city4.jpg" id="4_coknk"]
+[ext_resource type="Texture2D" uid="uid://hcjj2ymag7jm" path="res://locations/city5.jpg" id="5_exwtt"]
+[ext_resource type="Texture2D" uid="uid://ch70ixd5s7ce5" path="res://locations/city6.jpg" id="6_twkok"]
+[ext_resource type="Texture2D" uid="uid://b4uxc6uatghwg" path="res://locations/city7.jpg" id="7_hlidw"]
+[ext_resource type="Texture2D" uid="uid://cduc676fafyfy" path="res://locations/office1.jpg" id="8_w0t24"]
+[ext_resource type="Texture2D" uid="uid://c7xggfkl8ke57" path="res://icon.svg" id="9_7arjl"]
+
+[node name="main2d" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(0.64, 0.64)
+transform = Transform2D(0.64, 0, 0, 0.64, 0, 0)
+script = ExtResource("1_sxeyp")
+
+[node name="Scheme" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1513.3125, 739.875)
+texture = ExtResource("1_q6avo")
+
+[node name="button_city_1" type="Button" parent="CanvasLayer"]
+offset_left = 1276.3125
+offset_top = 671.875
+offset_right = 1330.3125
+offset_bottom = 701.875
+
+[node name="button_city_2" type="Button" parent="CanvasLayer"]
+offset_left = 1276.3125
+offset_top = 628.875
+offset_right = 1330.3125
+offset_bottom = 658.875
+
+[node name="button_city_3" type="Button" parent="CanvasLayer"]
+offset_left = 1448.3125
+offset_top = 886.875
+offset_right = 1495.3125
+offset_bottom = 941.875
+
+[node name="button_city_4" type="Button" parent="CanvasLayer"]
+offset_left = 1483.3125
+offset_top = 677.875
+offset_right = 1540.3125
+offset_bottom = 726.875
+
+[node name="button_city_5" type="Button" parent="CanvasLayer"]
+offset_left = 1470.3125
+offset_top = 560.875
+offset_right = 1533.3125
+offset_bottom = 581.875
+
+[node name="button_city_6" type="Button" parent="CanvasLayer"]
+offset_left = 1638.3125
+offset_top = 601.875
+offset_right = 1707.3125
+offset_bottom = 622.875
+
+[node name="button_city_7" type="Button" parent="CanvasLayer"]
+offset_left = 1609.3125
+offset_top = 738.875
+offset_right = 1678.3125
+offset_bottom = 759.875
+
+[node name="comp_down" type="Button" parent="CanvasLayer"]
+offset_left = 159.375
+offset_top = 931.25
+offset_right = 1596.875
+offset_bottom = 987.5
+
+[node name="camera_system" type="Node2D" parent="."]
+
+[node name="Camera1" type="Camera2D" parent="camera_system"]
+position = Vector2(6334, -115)
+zoom = Vector2(0.231, 0.231)
+
+[node name="Camera2" type="Camera2D" parent="camera_system"]
+position = Vector2(9788, -978)
+zoom = Vector2(0.625, 0.625)
+
+[node name="Camera3" type="Camera2D" parent="camera_system"]
+position = Vector2(9504, 37)
+zoom = Vector2(0.915, 0.915)
+
+[node name="Camera4" type="Camera2D" parent="camera_system"]
+position = Vector2(10422, -132)
+zoom = Vector2(2.39, 2.39)
+
+[node name="Camera5" type="Camera2D" parent="camera_system"]
+position = Vector2(10540, 347)
+zoom = Vector2(1.615, 1.615)
+
+[node name="Camera6" type="Camera2D" parent="camera_system"]
+position = Vector2(9397, 826)
+zoom = Vector2(1.205, 1.205)
+
+[node name="Camera7" type="Camera2D" parent="camera_system"]
+position = Vector2(10408, 870)
+zoom = Vector2(1.565, 2.57)
+
+[node name="office1" type="Camera2D" parent="camera_system"]
+position = Vector2(9371, 1662)
+zoom = Vector2(1.63, 0.935)
+
+[node name="images" type="Node2D" parent="."]
+position = Vector2(6334, -115)
+
+[node name="City1" type="Sprite2D" parent="images"]
+texture = ExtResource("1_yhyqj")
+
+[node name="City2" type="Sprite2D" parent="images"]
+position = Vector2(3454, -863)
+texture = ExtResource("2_q6avo")
+
+[node name="City3" type="Sprite2D" parent="images"]
+position = Vector2(3170, 162)
+texture = ExtResource("3_sxeyp")
+
+[node name="City4" type="Sprite2D" parent="images"]
+position = Vector2(4088, -17)
+texture = ExtResource("4_coknk")
+
+[node name="City5" type="Sprite2D" parent="images"]
+position = Vector2(4206, 462)
+texture = ExtResource("5_exwtt")
+
+[node name="City6" type="Sprite2D" parent="images"]
+position = Vector2(3063, 941)
+texture = ExtResource("6_twkok")
+
+[node name="City7" type="Sprite2D" parent="images"]
+position = Vector2(4074, 985)
+texture = ExtResource("7_hlidw")
+
+[node name="Office" type="Sprite2D" parent="images"]
+position = Vector2(3037, 1777)
+texture = ExtResource("8_w0t24")
+
+[node name="Icon" type="Sprite2D" parent="images"]
+position = Vector2(4132, 1544)
+texture = ExtResource("9_7arjl")
+
+[connection signal="pressed" from="CanvasLayer/button_city_1" to="." method="_on_button_city_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_1" to="CanvasLayer" method="_on_button_city_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_2" to="." method="_on_button_city_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_2" to="CanvasLayer" method="_on_button_city_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_3" to="." method="_on_button_city_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_3" to="CanvasLayer" method="_on_button_city_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_4" to="." method="_on_button_city_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_4" to="CanvasLayer" method="_on_button_city_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_5" to="." method="_on_button_city_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_5" to="CanvasLayer" method="_on_button_city_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_6" to="." method="_on_button_city_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_6" to="CanvasLayer" method="_on_button_city_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_7" to="." method="_on_button_city_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_city_7" to="CanvasLayer" method="_on_button_city_7_pressed"]
