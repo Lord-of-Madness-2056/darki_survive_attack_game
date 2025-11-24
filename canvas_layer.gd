@@ -35,7 +35,9 @@ func _on_button_city_6_pressed() -> void:
 	camera6.make_current()
 func _on_button_city_7_pressed() -> void:
 	camera7.make_current()
-
+func _on_comp_down_mouse_entered() -> void:
+	camera_office.make_current()
+	
 func back_to_office():
 	camera_office.make_current()
 	scheme.visible = true 
