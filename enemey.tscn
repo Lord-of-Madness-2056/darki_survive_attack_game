@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw67xs0vrts7r"]
+
+[ext_resource type="Texture2D" uid="uid://c7xggfkl8ke57" path="res://icon.svg" id="1_87l3t"]
+[ext_resource type="Script" uid="uid://87j6y71fi8jl" path="res://enemey.gd" id="1_xj8i8"]
+[ext_resource type="Texture2D" uid="uid://b4clwjvi7ihm0" path="res://images/gameover.jpeg" id="3_kesds"]
+
+[node name="enemey" type="Node2D"]
+script = ExtResource("1_xj8i8")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1.4683453, 0, 0, 1)
+texture = ExtResource("1_87l3t")
+
+[node name="Timer_easy" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Timer_normal" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="Timer_hard" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Gameover" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("3_kesds")

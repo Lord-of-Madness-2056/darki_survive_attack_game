@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmkbmwskegcfm"]
+[gd_scene load_steps=14 format=3 uid="uid://bmkbmwskegcfm"]
 
 [ext_resource type="Script" uid="uid://bqp8y2frl4thr" path="res://canvas_layer.gd" id="1_sxeyp"]
 [ext_resource type="Texture2D" uid="uid://dt8edwlmb7l08" path="res://images/city1.jpeg" id="2_sxeyp"]
@@ -11,102 +11,107 @@
 [ext_resource type="Texture2D" uid="uid://c7xggfkl8ke57" path="res://icon.svg" id="9_7arjl"]
 [ext_resource type="Texture2D" uid="uid://duas7pqqcoaet" path="res://images/office.png" id="9_ahvsh"]
 [ext_resource type="Texture2D" uid="uid://23leupdni1wp" path="res://images/map.png" id="11_8c7tm"]
+[ext_resource type="PackedScene" uid="uid://dw67xs0vrts7r" path="res://enemey.tscn" id="12_coknk"]
+[ext_resource type="Texture2D" uid="uid://b4clwjvi7ihm0" path="res://images/gameover.jpeg" id="12_exwtt"]
 
 [node name="main2d" type="Node2D"]
 
-[node name="Office" type="Sprite2D" parent="."]
-position = Vector2(558, 330.99997)
-scale = Vector2(4.18, 4.18)
-texture = ExtResource("9_ahvsh")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-scale = Vector2(0.64, 0.64)
-transform = Transform2D(0.64, 0, 0, 0.64, 0, 0)
 script = ExtResource("1_sxeyp")
 
 [node name="Map" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1471.8751, 695.31256)
-scale = Vector2(2.775, 2.775)
+position = Vector2(1032, 540)
 texture = ExtResource("11_8c7tm")
 
 [node name="button_city_1" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 1314.0625
-offset_top = 678.125
-offset_right = 1359.375
-offset_bottom = 729.6875
+offset_left = 928.0
+offset_top = 578.0
+offset_right = 993.0
+offset_bottom = 623.5625
 
 [node name="button_city_2" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 1273.4375
-offset_top = 492.1875
-offset_right = 1375.0
-offset_bottom = 593.75
+offset_left = 1060.0
+offset_top = 443.0
+offset_right = 1142.5625
+offset_bottom = 496.0
 
 [node name="button_city_3" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 1179.6875
-offset_top = 795.31256
-offset_right = 1231.25
-offset_bottom = 879.6875
+offset_left = 918.0
+offset_top = 448.0
+offset_right = 972.0
+offset_bottom = 472.37494
 
 [node name="button_city_4" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 1506.25
-offset_top = 653.125
-offset_right = 1545.3125
-offset_bottom = 745.3125
+offset_left = 923.0
+offset_top = 484.0
+offset_right = 967.0
+offset_bottom = 519.1875
 
 [node name="button_city_5" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 1637.5
-offset_top = 560.9375
-offset_right = 1693.75
-offset_bottom = 600.0
+offset_left = 1085.0
+offset_top = 593.0
+offset_right = 1141.25
+offset_bottom = 632.0625
 
 [node name="button_city_6" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 1614.0625
-offset_top = 621.875
-offset_right = 1715.625
-offset_bottom = 704.6875
+offset_left = 1084.0
+offset_top = 550.0
+offset_right = 1143.0
+offset_bottom = 581.8125
 
 [node name="button_city_7" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 1548.4375
-offset_top = 779.68756
-offset_right = 1579.6875
-offset_bottom = 865.625
+offset_left = 1017.0
+offset_top = 598.0
+offset_right = 1070.0
+offset_bottom = 633.93744
+
+[node name="world" type="Button" parent="CanvasLayer"]
+modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
+offset_left = 17.1875
+offset_top = 20.3125
+offset_right = 354.6875
+offset_bottom = 164.0625
 
 [node name="comp_down" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
-offset_left = 159.375
-offset_top = 931.25
-offset_right = 1596.875
-offset_bottom = 987.5
+offset_left = -60.0
+offset_top = 640.0
+offset_right = 1170.0
+offset_bottom = 681.0
 
 [node name="camera_system" type="Node2D" parent="."]
 
 [node name="Camera1" type="Camera2D" parent="camera_system"]
-position = Vector2(4474, -632)
+position = Vector2(1935.9998, -393.99994)
 
 [node name="Camera2" type="Camera2D" parent="camera_system"]
-position = Vector2(5645, -632)
+position = Vector2(3106.9998, -393.99994)
 
 [node name="Camera3" type="Camera2D" parent="camera_system"]
-position = Vector2(6812, -632)
+position = Vector2(4274, -393.99994)
 
 [node name="Camera4" type="Camera2D" parent="camera_system"]
-position = Vector2(7982, -632)
+position = Vector2(1936, 353.99988)
 
 [node name="Camera5" type="Camera2D" parent="camera_system"]
-position = Vector2(9150, -632)
+position = Vector2(3111.001, 338.99988)
 
 [node name="Camera6" type="Camera2D" parent="camera_system"]
-position = Vector2(10322, -632)
+position = Vector2(4306.002, 301.99982)
 
 [node name="Camera7" type="Camera2D" parent="camera_system"]
-position = Vector2(11496, -632)
+position = Vector2(3114.0005, 1035.9999)
+
+[node name="world" type="Camera2D" parent="camera_system"]
+position = Vector2(2334, 286)
+zoom = Vector2(0.215, 0.215)
 
 [node name="office1" type="Camera2D" parent="camera_system"]
 position = Vector2(558, 331)
@@ -115,43 +120,62 @@ zoom = Vector2(0.9, 0.9)
 [node name="images" type="Node2D" parent="."]
 
 [node name="City1" type="Sprite2D" parent="images"]
-position = Vector2(4474, -632.00006)
+position = Vector2(1935.9998, -394)
 scale = Vector2(3.839999, 3.8571427)
 texture = ExtResource("2_sxeyp")
 
 [node name="City2" type="Sprite2D" parent="images"]
-position = Vector2(5645, -632)
+position = Vector2(3106.9998, -393.99994)
 scale = Vector2(2.3999999, 1.8000001)
 texture = ExtResource("3_coknk")
 
 [node name="City3" type="Sprite2D" parent="images"]
-position = Vector2(6812, -631.875)
+position = Vector2(4274, -393.87494)
 scale = Vector2(1.9200003, 1.3477134)
 texture = ExtResource("4_exwtt")
 
 [node name="City4" type="Sprite2D" parent="images"]
-position = Vector2(7982, -632)
+position = Vector2(1936.0002, 353.99994)
 scale = Vector2(0.57600015, 0.64800006)
 texture = ExtResource("5_twkok")
 
 [node name="City5" type="Sprite2D" parent="images"]
-position = Vector2(9150, -632)
+position = Vector2(3111, 338.99988)
 scale = Vector2(4.189094, 3.5409834)
 texture = ExtResource("6_hlidw")
 
 [node name="City6" type="Sprite2D" parent="images"]
-position = Vector2(10321.999, -632)
+position = Vector2(4306, 301.99994)
 scale = Vector2(0.16938701, 0.19058822)
 texture = ExtResource("7_w0t24")
 
 [node name="City7" type="Sprite2D" parent="images"]
-position = Vector2(11496, -632)
+position = Vector2(3114, 1036)
 scale = Vector2(1.8000004, 1.3500001)
 texture = ExtResource("8_7arjl")
 
 [node name="Icon" type="Sprite2D" parent="images"]
-position = Vector2(4132, 1544)
+position = Vector2(555, 383)
 texture = ExtResource("9_7arjl")
+
+[node name="Office" type="Sprite2D" parent="images"]
+position = Vector2(558, 330.99997)
+scale = Vector2(4.18, 4.18)
+texture = ExtResource("9_ahvsh")
+
+[node name="Label" type="Label" parent="images"]
+offset_right = 51.0
+offset_bottom = 26.0
+text = "cam1"
+
+[node name="Gameover" type="Sprite2D" parent="images"]
+visible = false
+position = Vector2(579, 263)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_exwtt")
+
+[node name="enemey" parent="." instance=ExtResource("12_coknk")]
+position = Vector2(623, 117)
 
 [connection signal="pressed" from="CanvasLayer/button_city_1" to="." method="_on_button_city_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/button_city_1" to="CanvasLayer" method="_on_button_city_1_pressed"]
@@ -167,4 +191,5 @@ texture = ExtResource("9_7arjl")
 [connection signal="pressed" from="CanvasLayer/button_city_6" to="CanvasLayer" method="_on_button_city_6_pressed"]
 [connection signal="pressed" from="CanvasLayer/button_city_7" to="." method="_on_button_city_7_pressed"]
 [connection signal="pressed" from="CanvasLayer/button_city_7" to="CanvasLayer" method="_on_button_city_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/world" to="CanvasLayer" method="_on_world_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/comp_down" to="CanvasLayer" method="_on_comp_down_mouse_entered"]

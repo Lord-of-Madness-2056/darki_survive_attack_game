@@ -9,6 +9,7 @@ extends CanvasLayer
 @onready var camera5 = get_parent().get_node("camera_system/Camera5")
 @onready var camera6 = get_parent().get_node("camera_system/Camera6")
 @onready var camera7 = get_parent().get_node("camera_system/Camera7")
+@onready var world = get_parent().get_node("camera_system/world")
 # Добавьте остальные камеры: camera3, camera4 и т.д.
 
 func _ready():
@@ -37,7 +38,8 @@ func _on_button_city_7_pressed() -> void:
 	camera7.make_current()
 func _on_comp_down_mouse_entered() -> void:
 	camera_office.make_current()
-	
+func _on_world_pressed() -> void:
+	world.make_current()
 func back_to_office():
 	camera_office.make_current()
 	scheme.visible = true 
