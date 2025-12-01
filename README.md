@@ -1,3 +1,8 @@
 # darki_survive_attack_game
-this game is not even in the alpha version
-This version shows the basic mechanics
+чтобы запустить игру нужно скачать движок  godot engine 4.5.1, затем импортировать проект
+
+сейчас проект представляет из себя показ текущих механик
+
+this game is made by @great_evil
+все совпадения с реальностью случайный
+это ещё даже и не альфа (alpha)

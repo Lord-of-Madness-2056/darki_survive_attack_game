@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmkbmwskegcfm"]
+[gd_scene load_steps=15 format=3 uid="uid://bmkbmwskegcfm"]
 
 [ext_resource type="Script" uid="uid://bqp8y2frl4thr" path="res://canvas_layer.gd" id="1_sxeyp"]
+[ext_resource type="Script" uid="uid://clhyl5rvbri3f" path="res://night.gd" id="1_twkok"]
 [ext_resource type="Texture2D" uid="uid://dt8edwlmb7l08" path="res://images/city1.jpeg" id="2_sxeyp"]
 [ext_resource type="Texture2D" uid="uid://b2m1nc38n672n" path="res://images/city2.jpeg" id="3_coknk"]
 [ext_resource type="Texture2D" uid="uid://cytawhdkdcfi6" path="res://images/city3.jpg" id="4_exwtt"]
@@ -15,6 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://b4clwjvi7ihm0" path="res://images/gameover.jpeg" id="12_exwtt"]
 
 [node name="main2d" type="Node2D"]
+script = ExtResource("1_twkok")
+
+[node name="hour" type="Timer" parent="."]
+wait_time = 60.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_sxeyp")
@@ -29,6 +34,7 @@ offset_left = 928.0
 offset_top = 578.0
 offset_right = 993.0
 offset_bottom = 623.5625
+text = "cam 1"
 
 [node name="button_city_2" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
@@ -36,6 +42,7 @@ offset_left = 1060.0
 offset_top = 443.0
 offset_right = 1142.5625
 offset_bottom = 496.0
+text = "cam 2"
 
 [node name="button_city_3" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
@@ -43,6 +50,7 @@ offset_left = 918.0
 offset_top = 448.0
 offset_right = 972.0
 offset_bottom = 472.37494
+text = "cam 3"
 
 [node name="button_city_4" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
@@ -50,6 +58,7 @@ offset_left = 923.0
 offset_top = 484.0
 offset_right = 967.0
 offset_bottom = 519.1875
+text = "cam 4"
 
 [node name="button_city_5" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
@@ -57,6 +66,7 @@ offset_left = 1085.0
 offset_top = 593.0
 offset_right = 1141.25
 offset_bottom = 632.0625
+text = "cam 5"
 
 [node name="button_city_6" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
@@ -64,13 +74,15 @@ offset_left = 1084.0
 offset_top = 550.0
 offset_right = 1143.0
 offset_bottom = 581.8125
+text = "cam 6"
 
 [node name="button_city_7" type="Button" parent="CanvasLayer"]
-modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
+modulate = Color(6.575, 6.575, 6.575, 1)
 offset_left = 1017.0
 offset_top = 598.0
 offset_right = 1070.0
 offset_bottom = 633.93744
+text = "cam 7"
 
 [node name="world" type="Button" parent="CanvasLayer"]
 modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
@@ -84,7 +96,28 @@ modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
 offset_left = -60.0
 offset_top = 640.0
 offset_right = 1170.0
-offset_bottom = 681.0
+offset_bottom = 700.0
+
+[node name="flash" type="Button" parent="CanvasLayer"]
+modulate = Color(6.5745435, 6.5745435, 6.5745435, 1)
+offset_left = 1015.0
+offset_top = 356.0
+offset_right = 1132.0
+offset_bottom = 422.0
+text = "flashlight 
+system"
+
+[node name="charge" type="Label" parent="CanvasLayer"]
+offset_left = 1004.0
+offset_top = 36.0
+offset_right = 1153.0
+offset_bottom = 67.0
+
+[node name="hours" type="Label" parent="CanvasLayer"]
+offset_left = 1041.0
+offset_top = 2.0
+offset_right = 1153.0
+offset_bottom = 32.0
 
 [node name="camera_system" type="Node2D" parent="."]
 
@@ -158,11 +191,6 @@ texture = ExtResource("8_7arjl")
 position = Vector2(555, 383)
 texture = ExtResource("9_7arjl")
 
-[node name="Office" type="Sprite2D" parent="images"]
-position = Vector2(558, 330.99997)
-scale = Vector2(4.18, 4.18)
-texture = ExtResource("9_ahvsh")
-
 [node name="Label" type="Label" parent="images"]
 offset_right = 51.0
 offset_bottom = 26.0
@@ -174,9 +202,15 @@ position = Vector2(579, 263)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("12_exwtt")
 
+[node name="Office" type="Sprite2D" parent="images"]
+position = Vector2(558, 330.99997)
+scale = Vector2(4.18, 4.18)
+texture = ExtResource("9_ahvsh")
+
 [node name="enemey" parent="." instance=ExtResource("12_coknk")]
 position = Vector2(623, 117)
 
+[connection signal="timeout" from="hour" to="." method="_on_hour_timeout"]
 [connection signal="pressed" from="CanvasLayer/button_city_1" to="." method="_on_button_city_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/button_city_1" to="CanvasLayer" method="_on_button_city_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/button_city_2" to="." method="_on_button_city_2_pressed"]
@@ -193,3 +227,4 @@ position = Vector2(623, 117)
 [connection signal="pressed" from="CanvasLayer/button_city_7" to="CanvasLayer" method="_on_button_city_7_pressed"]
 [connection signal="pressed" from="CanvasLayer/world" to="CanvasLayer" method="_on_world_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/comp_down" to="CanvasLayer" method="_on_comp_down_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/flash" to="CanvasLayer" method="_on_flash_pressed"]
