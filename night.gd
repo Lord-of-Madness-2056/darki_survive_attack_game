@@ -20,5 +20,10 @@ func _on_hour_timeout() -> void:
 	else:
 		AM = 6
 		victory()
+
 func victory():
 	get_tree().change_scene_to_file("res://victory.tscn")
+
+
+func _on_map_mouse_entered() -> void:
+	pass # Replace with function body.
